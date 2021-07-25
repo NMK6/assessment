@@ -1,0 +1,14 @@
+<svg width="77" height="65" viewBox="0 0 77 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Group 2">
+<path id="right-top" d="M77 50.5L55.5 3.8147e-06L50 23.3L77 50.5Z" fill="#1399D6"/>
+<path id="center-right" d="M38.5 14.5L55.5 0L50 23.8L38.5 14.5Z" fill="#74A5CE"/>
+<path id="right-bottom" d="M38.5 64.35L77 50.4627L50 23.1L38.5 64.35Z" fill="#0A669D"/>
+<path id="center-left" d="M38.5 14.4L19.5 0L27.5 23.4L38.5 14.4Z" fill="#9DD1E9"/>
+<path id="left-top" d="M0 51.3L19.5 3.8147e-06L27.5 23.3L0 51.3Z" fill="#50B8C5"/>
+<path id="left-bottom" d="M0 51.1759L27.4643 23.3L38.45 64.3L0 51.1759Z" fill="#349AB4"/>
+<g id="center">
+<path d="M38.5 15L49.5 23.5L38.5 62.5L28 23.5L38.5 15Z" fill="#353589"/>
+<path d="M49.5 23.5L38.5 15L28 23.5M49.5 23.5H28M49.5 23.5L38.5 62.5L28 23.5" stroke="#353589"/>
+</g>
+</g>
+</svg>
