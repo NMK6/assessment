@@ -1,0 +1,5 @@
+@mixin add-flex($direct, $pos) {
+  display: flex;
+  flex-direction: $direct;
+  justify-content: $pos;
+}

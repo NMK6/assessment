@@ -1,4 +1,32 @@
 .header {
   &__container {
+    padding: 2.5rem 13rem;
+    width: 100vw;
+    height: 7.7rem;
+    background-color: white;
+    @include add-flex(row, space-between);
+    align-items: center;
+  }
+  &__menu-container {
+    @include add-flex(row, space-between);
+    align-items: center;
+  }
+}
+.menu {
+  &__nav-container {
+    @include add-flex(row, space-between);
+    align-items: center;
+  }
+  &__contacts-container {
+    @include add-flex(row, space-between);
+  }
+}
+.nav {
+  &__ul {
+    @include add-flex(row, space-between);
+  }
+  &__li {
+    list-style: none;
+    padding-right: 1.5rem;
   }
 }

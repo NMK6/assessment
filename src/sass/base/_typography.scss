@@ -1,4 +1,18 @@
 body {
   font-size: 16px;
   color: $font-color;
+  line-height: 15px;
+  font-family: 'Montserrat', sans-serif;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+.nav {
+  &__li {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
 }

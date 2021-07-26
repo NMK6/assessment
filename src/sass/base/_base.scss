@@ -9,4 +9,5 @@ body {
   min-height: 100vh;
   max-width: 100vw;
   position: relative;
+  @include add-flex(column, stretch);
 }
