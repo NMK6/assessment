@@ -4,45 +4,50 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint ./",
-    "lint-fix": "eslint ./ --fix",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "build": "webpack"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --config webpack.config.js",
+    "build": "webback --mod production",
+    "lint": "eslint ./src/index.js"
   },
-  "keywords": [],
-  "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NMK6/assessment.git"
+  },
+  "keywords": [
+    "assessment"
+  ],
+  "author": "Marina Kehre",
   "license": "ISC",
-  "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/eslint-parser": "^7.14.7",
-    "@babel/preset-env": "^7.12.11",
-    "autoprefixer": "^10.2.1",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.2.2",
-    "chokidar": "^3.5.1",
-    "css-loader": "^5.0.1",
-    "eslint": "^7.18.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-plugin-import": "^2.22.1",
-    "extract-loader": "^5.1.0",
-    "file-loader": "^6.2.0",
-    "gifsicle": "^5.1.0",
-    "image-webpack-loader": "^7.0.1",
-    "imagemin-mozjpeg": "^9.0.0",
-    "imagemin-pngquant": "^9.0.1",
-    "imagemin-svgo": "^8.0.0",
-    "node-sass": "^6.0.1",
-    "path-browserify": "^1.0.1",
-    "postcss": "^8.2.4",
-    "postcss-cli": "^8.3.1",
-    "postcss-loader": "^4.1.0",
-    "postcss-preset-env": "^6.7.0",
-    "postcss-short": "^5.0.0",
-    "querystring-es3": "^0.2.1",
-    "sass": "^1.32.4",
-    "sass-loader": "^10.1.0",
-    "webpack": "^5.15.0",
-    "webpack-cli": "^4.3.1"
+  "bugs": {
+    "url": "https://github.com/NMK6/assessment/issues"
   },
-  "dependencies": {}
+  "homepage": "https://github.com/NMK6/assessment#readme",
+  "private": true,
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@babel/preset-env": "^7.14.8",
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.3.1",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.2.0",
+    "cssnano": "^5.0.7",
+    "file-loader": "^6.2.0",
+    "html-webpack-injector": "^1.1.4",
+    "html-webpack-plugin": "^5.3.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.1.0",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.36.0",
+    "sass-loader": "^12.1.0",
+    "trim-newlines": "^4.0.2",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  }
 }
