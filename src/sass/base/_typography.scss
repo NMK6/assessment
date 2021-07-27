@@ -16,3 +16,15 @@ h3 {
     font-weight: 600;
   }
 }
+.logo {
+  &__title-span {
+    text-transform: uppercase;
+    line-height: 1.4;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+  &__title-span:last-child {
+    font-size: 0.7rem;
+    font-weight: 400;
+  }
+}

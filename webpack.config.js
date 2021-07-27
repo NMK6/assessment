@@ -1,34 +1,41 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackInjector = require("html-webpack-injector");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-const env = require("postcss-preset-env");
-const autoprefixer = require("autoprefixer");
-const ImageminWebpack = require("imagemin-webpack-plugin").default;
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackInjector = require('html-webpack-injector');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require('path');
+const env = require('postcss-preset-env');
+const autoprefixer = require('autoprefixer');
+const ImageminWebpack = require('imagemin-webpack-plugin').default;
 
-const cssnano = require("cssnano");
-const imageminMozjpeg = require("imagemin-mozjpeg");
-const imageminPngquant = require("imagemin-pngquant");
-const imageminSvgo = require("imagemin-svgo");
+const cssnano = require('cssnano');
+const imageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
+const imageminSvgo = require('imagemin-svgo');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = () => {
   return {
-    entry: ["./src/index.js"],
+    entry: ['./src/index.js'],
     output: {
-      path: path.resolve(__dirname, "./dist"),
-      filename: "js/bundle.js",
+      path: path.resolve(__dirname, './dist'),
+      filename: 'js/bundle.js',
     },
-    mode: "production",
+    mode: 'production',
     //change for prod
     // devtool: "eval-cheap-module-source-map",
     devServer: {
       contentBase: path.join(__dirname, '/'),
       compress: false,
-  
+
       hot: true,
       port: 9000,
+    },
+    resolve: {
+      fallback: {
+        os: false,
+        path: false,
+        fs: false,
+      },
     },
     module: {
       rules: [
@@ -36,7 +43,7 @@ module.exports = () => {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
         },
         {
@@ -45,18 +52,18 @@ module.exports = () => {
             {
               loader: MiniCssExtractPlugin.loader,
               options: {
-                publicPath: "../",
+                publicPath: '../',
               },
             },
 
             {
-              loader: "css-loader",
+              loader: 'css-loader',
               options: {
                 importLoaders: 2,
                 esModule: true,
                 modules: {
                   namedExport: true,
-                  localIdentName: "[local]",
+                  localIdentName: '[local]',
                 },
                 //change for prod
                 sourceMap: false,
@@ -64,7 +71,7 @@ module.exports = () => {
             },
 
             {
-              loader: "postcss-loader",
+              loader: 'postcss-loader',
               options: {
                 postcssOptions: {
                   plugins: [
@@ -73,7 +80,7 @@ module.exports = () => {
                     }),
                     autoprefixer({}),
                     cssnano({
-                      preset: "default",
+                      preset: 'default',
                     }),
                   ],
                   minify: true,
@@ -81,43 +88,28 @@ module.exports = () => {
                 },
               },
             },
-            "sass-loader",
+            'sass-loader',
           ],
         },
         {
           test: /\.(png|jpg|gif|svg|jpeg)$/,
           use: [
             {
-              loader: "file-loader",
+              loader: 'file-loader',
               options: {
-                name: `./img/[name].[ext]`,
+                name: `img/[name].[ext]`,
               },
             },
           ],
         },
 
-        // {
-        //   test: /\.svg$/,
-
-        //   use: [
-        //     "@svgr/webpack",
-
-        //     {
-        //       loader: "file-loader",
-        //       options: {
-        //         name: "./img/[name].[ext]",
-        //       },
-        //     },
-        //   ],
-        // },
- 
         {
           test: /\.woff2$/,
           use: [
             {
-              loader: "file-loader",
+              loader: 'file-loader',
               options: {
-                name: "fonts/[name].[ext]",
+                name: 'fonts/[name].[ext]',
               },
             },
           ],
@@ -126,14 +118,14 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-        template: "./src/template.html",
-        title: "Home - Assessment",
+        template: './src/template.html',
+        title: 'Home - Assessment',
       }),
       new HtmlWebpackInjector(),
       new CleanWebpackPlugin(),
       new MiniCssExtractPlugin({
-        filename: "css/[name].[id].css",
-        chunkFilename: "css/[name].[id].css",
+        filename: 'css/[name].[id].css',
+        chunkFilename: 'css/[name].[id].css',
       }),
       new ImageminWebpack({
         plugins: [

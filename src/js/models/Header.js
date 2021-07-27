@@ -1,4 +1,4 @@
-import logo from './../../img/assessment-logo.svg';
+import logo from './../../../img/assessment-logo.svg';
 export const header = {
   title: ['assessment', 'accounting & finance'],
   menu: [
@@ -48,8 +48,17 @@ export const header = {
     },
     { name: ['contact', '/contact'], sub: [] },
   ],
-  mylogo: [logo, '/'],
-  logoIds: [],
-  colors: [],
+  myLogo: [logo, 'logo'],
+  logoIds: [
+    'left-bottom',
+    'left-top',
+    'center-left',
+    'right-bottom',
+    'center-right',
+    'right-top',
+  ],
+  colors: ['#0A669D', '#1399D6', '#349AB4', '#50B8C5', '#74A5CE', '#9DD1E9'],
+  icons: ['fas fa-phone', 'fas fa-envelope'],
+  iLink: ['tel:0208-123-4567', 'mailto: info@example.com'],
   buttons: { phone: ['0208 123 4567'], email: ['info@example.com'] },
 };

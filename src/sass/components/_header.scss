@@ -1,32 +1,55 @@
 .header {
   &__container {
-    padding: 2.5rem 13rem;
+    padding: 2.5rem 11.8rem 2.5rem 13rem;
     width: 100vw;
     height: 7.7rem;
     background-color: white;
     @include add-flex(row, space-between);
-    align-items: center;
+  }
+  &__logo-container {
+    width: 40vw;
+    @include add-flex(row, flex-start);
   }
   &__menu-container {
     @include add-flex(row, space-between);
-    align-items: center;
+
+    width: 60vw;
+  }
+  &__logo-title {
+    @include add-flex(column, center);
+    align-items: flex-start;
+  }
+  &__logo {
+    padding-right: 1rem;
   }
 }
 .menu {
   &__nav-container {
     @include add-flex(row, space-between);
-    align-items: center;
   }
   &__contacts-container {
     @include add-flex(row, space-between);
+  }
+  &__icon i {
+    position: relative;
+    padding: 1.2rem;
+  }
+  &__icon a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2.6rem 1.2rem;
   }
 }
 .nav {
   &__ul {
     @include add-flex(row, space-between);
+    padding-left: 0;
   }
   &__li {
     list-style: none;
+  }
+  &__li:not(:last-child) {
     padding-right: 1.5rem;
   }
 }
