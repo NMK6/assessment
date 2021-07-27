@@ -4,10 +4,31 @@
 body {
   padding: 0;
   margin: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+  max-width: 100%;
+}
+a {
+  list-style: none;
+  text-decoration: none;
+}
+img {
+  height: auto;
+  max-width: 100%;
 }
 .root {
-  min-height: 100vh;
-  max-width: 100vw;
+  height: 100vh;
+  width: 100%;
   position: relative;
   @include add-flex(column, stretch);
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
 }

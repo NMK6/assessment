@@ -17,9 +17,10 @@ export function createNewList(newClass, liClass, aClass, parent, arr) {
   arr.forEach((el) => {
     const newLi = document.createElement('li');
     newLi.className = liClass;
-    newLi.textContent = el.name[0];
+
     const newLink = document.createElement('a');
     newLink.className = aClass;
+    newLink.textContent = el.name[0];
     newLink.href = el.name[1];
     newList.appendChild(newLi);
     newLi.appendChild(newLink);
@@ -33,6 +34,7 @@ export function createIcon(arr, parent, newClass) {
     icon.className = el;
     const newLink = document.createElement('a');
     newLink.href = arr.iLink[key];
+    newLink.title = 'contact us';
     parent.appendChild(newContainer);
     newContainer.appendChild(icon);
     icon.appendChild(newLink);

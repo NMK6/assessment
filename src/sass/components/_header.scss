@@ -1,11 +1,17 @@
 .header {
   &__container {
     padding: 2.5rem 11.8rem 2.5rem 13rem;
-    width: 100vw;
+    width: 100%;
     height: 7.7rem;
     background-color: white;
     @include add-flex(row, space-between);
+    animation-name: go-down;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    z-index: 3;
   }
+
   &__logo-container {
     width: 40vw;
     @include add-flex(row, flex-start);
@@ -32,13 +38,13 @@
   }
   &__icon i {
     position: relative;
-    padding: 1.2rem;
+    padding: 0.9rem;
   }
   &__icon a {
     position: absolute;
-    top: 0;
+    top: 0.5rem;
     left: 0;
-    padding: 2.6rem 1.2rem;
+    padding: 2.6rem 0.9rem;
   }
 }
 .nav {
@@ -51,5 +57,19 @@
   }
   &__li:not(:last-child) {
     padding-right: 1.5rem;
+  }
+}
+a.nav__a {
+  padding: 3.3rem 0;
+}
+.first-screen {
+  &__container {
+    width: 100%;
+  }
+  &__video-container {
+    position: relative;
+  }
+  &__video {
+    width: 100%;
   }
 }
