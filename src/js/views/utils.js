@@ -47,6 +47,7 @@ export function createSvgImg(newLink, description, wSize, parent) {
   newImg.width = wSize;
   parent.appendChild(newImg);
 }
+
 export function addMenu(arr, fun, el, cl) {
   const headerContainer = document.createElement('div');
   headerContainer.className = 'header__container';

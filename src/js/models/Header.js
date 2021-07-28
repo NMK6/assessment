@@ -23,7 +23,7 @@ export const header = {
           'http://assessment.birdmarketing.co.uk/services/limited-company-accounts-for-companies-needing-accounts-in-essex-ltd-co/',
         ],
       ],
-      subImage: logo,
+      subImage: 'logo',
     },
     {
       name: ['sectors', '/sectors'],

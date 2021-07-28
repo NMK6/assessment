@@ -26,6 +26,7 @@ export function addMarkup(arr) {
     'header__logo visually-hidden',
     logoContainer
   );
+
   const logoTitleContainer = utils.createNewElement(
     'h1',
     'header__logo-title',

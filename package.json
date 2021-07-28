@@ -21,7 +21,6 @@
     "url": "https://github.com/NMK6/assessment/issues"
   },
   "homepage": "https://github.com/NMK6/assessment#readme",
-  "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.8",
     "@babel/preset-env": "^7.14.8",
