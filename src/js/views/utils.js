@@ -5,7 +5,10 @@ export function createNewElement(el, newClass, parent, ...arg) {
   newElement.className = newClass;
   parent.appendChild(newElement);
   if (arg.length > 0) {
-    newElement.textContent = arg;
+    newElement.textContent = arg[0];
+    if (arg.length > 1) {
+      newElement.type = arg[1];
+    }
   }
   return newElement;
 }
@@ -40,14 +43,47 @@ export function createIcon(arr, parent, newClass) {
     icon.appendChild(newLink);
   });
 }
-export function createSvgImg(newLink, description, wSize, parent) {
+export function createSvgImg(newLink, description, wSize, parent, newClass) {
   const newImg = document.createElement('img');
+  newImg.className = newClass;
   newImg.src = newLink;
   newImg.alt = description;
   newImg.width = wSize;
   parent.appendChild(newImg);
 }
+export function returnText(arr, el, newClass, backClass) {
+  setInterval(() => {
+    function changeText() {
+      return new Promise(function (resolve, reject) {
+        resolve();
+        reject();
+      });
+    }
 
+    changeText()
+      .then(function () {
+        el.textContent = '';
+        el.classList.remove(newClass);
+        el.classList.remove(backClass);
+      })
+      .then(function () {
+        setTimeout(() => {
+          el.textContent = arr[Math.floor(Math.random() * arr.length)];
+          el.classList.add(newClass);
+        }, 500);
+      })
+      .then(function () {
+        setTimeout(() => {
+          el.classList.add(backClass);
+        }, 4500);
+      })
+      .then(function () {
+        setTimeout(() => {}, 5500);
+      })
+      .catch();
+    changeText();
+  }, 10000);
+}
 export function addMenu(arr, fun, el, cl) {
   const headerContainer = document.createElement('div');
   headerContainer.className = 'header__container';

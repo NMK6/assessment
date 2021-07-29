@@ -17,3 +17,21 @@
   transition: 1s all ease-in-out;
   opacity: 0.8;
 }
+.anim-top {
+  animation-name: move-down;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.anim-p-from-left {
+  animation-name: come-from-left;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+.anim-p-back {
+  animation-name: go-away-to-left;
+  animation-duration: 3s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}

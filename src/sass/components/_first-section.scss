@@ -1,0 +1,49 @@
+.first-section {
+  &__container {
+    @include add-flex(row, center);
+    width: 100vw;
+    height: 80vh;
+    z-index: 4;
+  }
+  &__content-container {
+    @include add-flex(column, center);
+    width: 100vw;
+    height: 100%;
+    position: relative;
+  }
+  &__title-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__img {
+    opacity: 0.6;
+    animation-name: scale-from-small;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+  }
+  &__title {
+    animation-name: opacity-from-nill;
+    animation-timing-function: ease-in-out;
+    animation-duration: 3s;
+  }
+  &__button {
+    margin-top: -6rem;
+    animation-name: opacity-from-nill;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-duration: 3s;
+  }
+  &__p {
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    display: inline-block;
+  }
+}
+button.first-section__button:hover {
+  transform: scale(0.95);
+  transition: all 1s ease-in-out;
+}

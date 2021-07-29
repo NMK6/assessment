@@ -1,4 +1,4 @@
-import logo from './../../../img/assessment-logo.svg';
+import logo from './../../img/assessment-logo.svg';
 export const header = {
   title: ['assessment', 'accounting & finance'],
   menu: [

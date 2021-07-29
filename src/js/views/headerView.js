@@ -1,6 +1,11 @@
 import { elements } from './base';
 import * as utils from './utils';
 export function addMarkup(arr) {
+  const header = document.querySelector('head');
+  const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"><link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css' crossorigin="anonymous"/>`;
+  header.insertAdjacentHTML('beforeend', fonts);
   const headerContainer = utils.createNewElement(
     'header',
     'header__container',
@@ -32,7 +37,13 @@ export function addMarkup(arr) {
     'header__logo-title',
     logoContainer
   );
-  const logoImg = utils.createSvgImg(arr.myLogo[0], arr.myLogo[1], 70, logo);
+  const logoImg = utils.createSvgImg(
+    arr.myLogo[0],
+    arr.myLogo[1],
+    70,
+    logo,
+    'logo-img'
+  );
   const logoTitleFirst = utils.createNewElement(
     'span',
     'logo__title-span visually-hidden',
@@ -45,25 +56,21 @@ export function addMarkup(arr) {
     logoTitleContainer,
     arr.title[1]
   );
-  const menuContainer = utils.createNewElement(
-    'div',
-    'header__menu-container',
-    headerContainer
-  );
+
   const navContainer = utils.createNewElement(
     'nav',
     'menu__nav-container',
-    menuContainer
+    headerContainer
   );
   const contactsContainer = utils.createNewElement(
     'div',
     'menu__contacts-container',
-    menuContainer
+    headerContainer
   );
   utils.createIcon(arr, contactsContainer, 'menu__icon visually-hidden');
   utils.createNewList(
     'nav__ul',
-    'nav__li visually-hidden',
+    'nav__li   visually-hidden',
     'nav__a',
     navContainer,
     arr.menu
@@ -95,17 +102,16 @@ export function addMarkup(arr) {
       });
     })
     .then(function () {
-      {
-        const videoLink = `<video class="first-screen__video" poster="http://assessment.birdmarketing.co.uk/wp-content/uploads/background.jpg" data-object-fit="cover" data-object-position="top center" autoplay="" loop="" muted="" playsinline=""><source src="https://s3.eu-west-2.amazonaws.com/bird-video/London+Trim+3.mp4" type="video/mp4"></video>`;
-        videoContainer.insertAdjacentHTML('beforeend', videoLink);
-      }
+      const videoLink = `<video class="first-screen__video" poster="http://assessment.birdmarketing.co.uk/wp-content/uploads/background.jpg" data-object-fit="cover" data-object-position="top center" autoplay="" loop="" muted="" playsinline=""><source src="https://s3.eu-west-2.amazonaws.com/bird-video/London+Trim+3.mp4" type="video/mp4"></video>`;
+      videoContainer.insertAdjacentHTML('beforeend', videoLink);
+      document.querySelector('.first-animation').classList.add('anim-top');
     })
     .then(function () {
       setTimeout(() => {
         document
           .querySelector('.first-animation')
           .classList.add('anim-first-screen');
-      }, 2000);
+      }, 1900);
     })
 
     .catch();
