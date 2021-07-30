@@ -1,7 +1,7 @@
 .header {
   &__container {
     width: 100%;
-    padding: 2.5rem 12rem 2.5rem 13rem;
+    padding: 3.5rem 9rem 2.5rem 9.7rem;
     height: 7.7rem;
     background-color: white;
     @include add-flex(row, space-between);
@@ -13,7 +13,7 @@
   }
 
   &__logo-container {
-    width: 20%;
+    width: 22%;
 
     @include add-flex(row, flex-start);
   }
@@ -29,7 +29,7 @@
   &__nav-container {
     @include add-flex(row, space-evenly);
     flex: 1;
-    padding: 0 2rem;
+    padding-right: 3rem;
   }
   &__contacts-container {
     @include add-flex(row, flex-end);
